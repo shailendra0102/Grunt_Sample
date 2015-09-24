@@ -1,0 +1,9 @@
+{
+  "name": "Grunt Sample",
+  "version": "1.0.0.0",
+  "homepage": "https://github.com/shailendra0102/Grunt_Sample",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.6"
+  }
+}
