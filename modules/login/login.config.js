@@ -1,12 +1,22 @@
 (function(){
 	angular.module('login')
 
-	.config(function($stateProvider, $urlRouterProvider) {
+	.config(configFun);
+
+	configFun.$inject=['$stateProvider','$urlRouterProvider'];
+
+	function configFun($stateProvider, $urlRouterProvider) {
     
-    $stateProvider
+	    $stateProvider
         .state('login', {
             url: '/login',
-            templateUrl: 'modules/login/views/partial-login.html'
+            views:{
+            	'main':{
+            		templateUrl: 'modules/login/views/partial-login.html',
+            		controller:'loginController as vm'
+            	}
+            }
         });
-	});
+	}
+
 })();

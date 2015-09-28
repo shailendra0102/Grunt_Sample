@@ -1,16 +1,11 @@
 (function(){
 	angular.module('Grunt')
+    .config(configFun);
 
-	.config(function($stateProvider, $urlRouterProvider) {
+    configFun.$inject=['$stateProvider','$urlRouterProvider'];
+
+    function configFun($stateProvider, $urlRouterProvider){
+        $urlRouterProvider.otherwise('/login');    
+    };
     
-    $urlRouterProvider.otherwise('/login');
-    
-    /*$stateProvider
-        
-        // HOME STATES AND NESTED VIEWS ========================================
-        .state('login', {
-            url: '/login',
-            templateUrl: 'modules/login/views/partial-login.html'
-        });*/
-	});
 })();
